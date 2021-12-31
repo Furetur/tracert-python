@@ -1,8 +1,8 @@
 from random import randint
 import argparse
-from typing import Optional, List, Iterable, Tuple
+from typing import Iterable, Tuple
 
-from icmplib import ICMPv4Socket, ICMPRequest, TimeoutExceeded, ICMPSocketError, SocketUnavailableError, traceroute
+from icmplib import ICMPv4Socket, ICMPRequest, TimeoutExceeded, ICMPSocketError, SocketUnavailableError
 
 IpAddr = str
 
@@ -21,7 +21,7 @@ class Traceroute:
         self.__seq = 0
 
     def __ping(self, cur_ttl: int) -> IpAddr:
-        req = ICMPRequest(self.destination, id=1, sequence=cur_ttl, ttl=cur_ttl)
+        req = ICMPRequest(self.destination, id=self.__id, sequence=cur_ttl, ttl=cur_ttl)
         self.sock.send(req)
         try:
             reply = self.sock.receive(req, timeout=self.timeout)
