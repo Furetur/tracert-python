@@ -32,4 +32,10 @@ sudo python3 main.py 8.8.8.8
 sudo ./venv/bin/python3 main.py 8.8.8.8
 ```
 
+## Dependencies
+
+All dependencies are automatically installed if you follow the [How to run](#how-to-run-linux) instructions.
+
+This tool uses `icmplib` (listed in requirements.txt) to construct ICMP packets.
+
 
