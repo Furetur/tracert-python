@@ -32,6 +32,9 @@ sudo python3 main.py 8.8.8.8
 sudo ./venv/bin/python3 main.py 8.8.8.8
 ```
 
+You can check out the full list of CLI arguments by running
+`sudo ./venv/bin/python3 main.py -h`.
+
 ## Dependencies
 
 All dependencies are automatically installed if you follow the [How to run](#how-to-run-linux) instructions.
